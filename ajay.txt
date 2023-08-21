@@ -1,0 +1,23 @@
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+    <% if (studentData.length > 0) { %>
+            <% studentData.forEach((student) => { %>
+              <div class="col-md-12">
+                <div>
+                  <p><strong>Name:</strong> <%= student.name %></p>
+                  <p><strong>Email:</strong> <%= student.email %></p>
+                  <p><strong>Password:</strong> <%= student.password %></p>
+                </div>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <div class="col-md-12">
+              <h1 class="h2 text-center">No data found</h1>
+            </div>
+          <% } %>

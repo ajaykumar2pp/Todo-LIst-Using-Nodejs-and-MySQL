@@ -1,0 +1,18 @@
+
+    <div class="row">
+
+        <% studentData.forEach((student)=> { %>
+          <div class="col-md-12">
+            <div>
+              <p><strong>Name:</strong>
+                <%= student.name %>
+              </p>
+              <p><strong>Email:</strong>
+                <%= student.email %>
+              </p>
+
+            </div>
+          </div>
+          <% }); %>
+          
+    </div>
