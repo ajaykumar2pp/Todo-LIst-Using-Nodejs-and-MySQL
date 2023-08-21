@@ -1,0 +1,15 @@
+
+//***********************   Update Route ******************//
+app.post('/students/update/:id', async (req, res) => {
+  const studentId = req.params.id;
+  const updatedData = req.body; // Updated data from the form
+
+  try {
+    await updateStudentInDatabase(studentId, updatedData);
+
+    res.redirect('/students');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
